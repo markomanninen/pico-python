@@ -14,7 +14,7 @@ def LoadLibraryDarwin(library):
 
     http://ulthiel.com/vk2utl/picoscope-python-interface-under-mac-os-x/
     """
-    PICO_LIB_PATH = "/Applications/PicoScope6.app/Contents/Resources/lib/"
+    PICO_LIB_PATH = "/Applications/PicoScope 6.app/Contents/Resources/lib/"
 
     # Libraries that depend on libiomp5.dylib
     IOMP5_DEPS = ["libpicoipp.dylib", "libpicoipp.1.dylib"]
@@ -29,7 +29,7 @@ def LoadLibraryDarwin(library):
             FileNotFoundError = IOError
         if not Path(PICO_LIB_PATH).is_dir():
             raise FileNotFoundError(
-                    "/Applications/PicoScope6.app is missing")
+                    "/Applications/PicoScope 6.app is missing")
 
         # Modifying the libraries in-place breaks their signatures, causing
         # PicoScope6.app to fail to detect the oscilloscope.  Instead, patch
